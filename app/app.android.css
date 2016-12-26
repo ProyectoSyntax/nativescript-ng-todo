@@ -1,0 +1,33 @@
+﻿.fa {
+    font-family: "FontAwesome", fontawesome-webfont;
+    width:30;
+    padding: 0;
+    margin: 0;
+}
+
+Label {
+    padding-top: 15;
+}
+
+.done{
+    text-decoration: line-through;
+}
+
+.btn-done {
+    color: limegreen;
+}
+
+.borrar{
+    color:red;
+}
+
+Button{
+    background-color: white;
+    border-width: 1;
+    border-color:white;
+    color:#157efb;
+}
+
+StackLayout{
+    padding: 10;
+}

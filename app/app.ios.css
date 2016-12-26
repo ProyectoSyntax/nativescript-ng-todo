@@ -1,0 +1,26 @@
+.fa {
+    font-family: "FontAwesome", fontawesome-webfont;
+    width:30;
+    padding: 0;
+    margin: 0;
+}
+
+.action-item{
+    color:#157efb;
+}
+
+.done{
+    text-decoration: line-through;
+}
+
+.btn-done {
+    color: limegreen;
+}
+
+.borrar{
+    color:red;
+}
+
+StackLayout{
+    padding: 10;
+}
