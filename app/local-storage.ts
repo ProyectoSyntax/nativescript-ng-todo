@@ -7,6 +7,18 @@ export class LocalStorage {
 
     public static get todos(): Array<any> {
         var todos = ApplicationSettings.getString("todos");
-        return !todos ? new Array<any>() : JSON.parse(todos);
+        return todos == null ? new Array<any>() : JSON.parse(todos);
+    }
+
+    public static set user(uname: string) {
+        ApplicationSettings.setString("user", uname);
+    }
+
+    public static get user() {
+        return ApplicationSettings.getString("user");
+    }
+
+    public static logout() {
+        ApplicationSettings.clear();
     }
 }

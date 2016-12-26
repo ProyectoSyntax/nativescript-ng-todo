@@ -2,14 +2,17 @@
     <ActionItem ios.position="right" android.position="actionBar" (tap)="newTodo()">
         <Label text="&#xf067;" class="fa action-item"></Label>
     </ActionItem>
+    <ActionItem text="LogOut" (tap)="logout()" ios.position="left" android.position="menu" class="action-item">
+    </ActionItem>
 </ActionBar>
+
 <StackLayout>
     <GridLayout *ngFor="let todo of todoList" rows="auto" columns="auto, *, auto, auto">
         <Button row="0" col="0" [text]="todo.done ? '&#xf05d;' : '&#xf10c;'" class="fa" [class.btn-done]="todo.done" (tap)="toggleDone(todo)"></Button>
-        
+
         <Label *ngIf="!todo.editing" row="0" col="1" [text]="todo.name" [class.done]="todo.done" textWrap="true"></Label>
         <TextField *ngIf="todo.editing" row="0" col="1" hint="Ingresa el nuevo nombre" [(ngModel)]="todo.name"></TextField>
-        
+
         <Button row="0" col="2" [text]="todo.editing ? '&#xf00c;' : '&#xf040;'" class="fa" (tap)="todo.editing ? doneEditing(todo) : editTodo(todo)"></Button>
         <Button *ngIf="!todo.editing" row="0" col="3" text="&#xf1f8;" class="fa borrar" (tap)="deleteTodo(todo)"></Button>
     </GridLayout>
